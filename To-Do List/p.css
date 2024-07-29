@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #f46666;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 44px;
+    text-align: center;
+    margin: 20px;
+    margin-right: 14.4375rem;
+}
+
+h2{
+    font-family: cursive;
+    font-weight: 300;
+    font-size: 27px;
+    margin-left: 2.8125rem;
+    color: gray;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 7.1875rem;
+}
+
+#input {
+    border: none;
+    border-radius: 6px;
+    font-size: 22px;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000000;
+    border-left: 3px solid black;
+    border-color: #f46666;
+    margin-right: 10px;
+}
+
+#btn1 {
+    font-size: 23px;
+    padding: 6px;
+    background-color: lightsteelblue;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#btn1:active {
+    background-color: rgb(232, 78, 61);
+    border: 1px solid black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 50px;
+}
+
+.todo-section, .completed-section {
+    width: 40%;
+}
+
+.vertical-line {
+    border-left: 3px solid #f46666; /* Make the line thicker and more visible */
+    height: 100%;
+    margin: 0 20px;
+}
+
+
+.todo-list-elem, .completed-list-elem {
+    margin-top: 20px;
+}
+
+.main_todo_div, .main_completed_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 17.125rem;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 21px;
+    border-radius: 6px;
+    background-color: rgba(237, 236, 236, 0.548);
+}
+
+.deleteBtn {
+    background-color: rgb(232, 198, 185);
+    font-size: large;
+    border: none;
+    border-radius: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    background-color: rgb(203, 130, 46);
+    border: 1px solid black;
+    color: aliceblue;
+}
+
+li {
+    color: #000000;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+li.completed {
+    text-decoration: line-through;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 36px;
+        margin-right: 10rem;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-left: 2rem;
+    }
+
+    #input {
+        font-size: 20px;
+    }
+
+    #btn1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 32px;
+        margin-right: 8rem;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-left: 1.5rem;
+    }
+
+    #input {
+        font-size: 18px;
+    }
+
+    #btn1 {
+        font-size: 18px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todo-section, .completed-section {
+        width: 90%;
+    }
+
+    .vertical-line {
+        border-left: none;
+        border-top: 3px solid #f46666;
+        width: 80%;
+        height: 0;
+        margin: 20px 0;
+    }
+
+    .main_todo_div, .main_completed_div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        margin-right: 5rem;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-left: 1rem;
+    }
+
+    #input {
+        font-size: 20px;
+    }
+
+    #btn1 {
+        font-size: 17px;
+    }
+
+    .main_todo_div, .main_completed_div {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-left: 0.5rem;
+    }
+
+    form {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    #input {
+        font-size: 25px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #btn1 {
+        font-size: 23px;
+    }
+
+    .container {
+        margin: 0 20px;
+    }
+
+    .todo-section, .completed-section {
+        width: 100%;
+    }
+
+    .vertical-line {
+        border-left: none;
+        border-top: 3px solid #f46666;
+        width: 100%;
+        height: 0;
+        margin: 20px 0;
+    }
+
+    .main_todo_div, .main_completed_div {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+    }
+}
